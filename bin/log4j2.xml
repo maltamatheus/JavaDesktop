@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+	<Appenders>
+
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout
+				pattern="%d{dd/MM/yyyy - HH:mm:ss} %-5p %C{1} - %m%n">
+			</PatternLayout>
+		</Console>
+
+<!-- 
+		<RollingFile name="arq1" fileName="log/arq1.log"
+			filePattern="log/arq1.log">
+			<PatternLayout
+				pattern="%d{dd/MM/yyyy - HH:mm:ss} %-5p %C{1} - %m%n">
+			</PatternLayout>
+			<Policies>
+				<OnStartupTriggeringPolicy />
+			</Policies>
+		</RollingFile>
+
+		<RollingFile name="arq2" fileName="log/arq2.log"
+			filePattern="log/arq2.log">
+			<PatternLayout
+				pattern="%d{dd/MM/yyyy - HH:mm:ss} %-5p %C{1} - %m%n">
+			</PatternLayout>
+			<Policies>
+				<OnStartupTriggeringPolicy />
+			</Policies>
+		</RollingFile>
+ -->
+	</Appenders>
+
+	<Loggers>
+		<Root>
+			<AppenderRef ref="Console"/>
+		</Root>
+		<Logger name="pai.Pai" level="debug" additivity="false">
+			<AppenderRef ref="Console"/>
+		</Logger>
+	</Loggers>
+
+</configuration>
